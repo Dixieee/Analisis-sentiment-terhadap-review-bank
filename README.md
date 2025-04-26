@@ -1,58 +1,80 @@
-# Baseline Time Series Regression Project
 
-Proyek ini merupakan implementasi prediksi regresi pada data time series untuk memodelkan nilai **% Baseline** berdasarkan beberapa fitur cuaca dan solar irradiance. Proyek ini mencakup preprocessing data, imputasi missing value, scaling, model regresi, dan pembuatan file submission.
+# Sentiment Analysis of Bank Reviews 🏦
 
-## Struktur Direktori
+This project involves sentiment analysis of customer reviews for Indonesian banks. The objective is to classify the reviews into three sentiment categories: **Positive**, **Neutral**, and **Negative**. Machine learning algorithms are employed to perform this classification. 🤖
 
-```
-.
-├── data/                 # Folder berisi data (train, test, weather, solar, dll)
-├── notebooks/            # Jupyter notebooks untuk eksplorasi dan modeling
-├── outputs/              # Folder hasil submission dan visualisasi
-├── requirements.txt      # Daftar dependensi proyek
-├── README.md             # File ini
-└── main.py               # (Jika ada) script utama untuk menjalankan pipeline
-```
+## Project Overview 🌟
 
-## Fitur Utama
+The project uses various preprocessing techniques, including tokenization, normalization, stopword removal, and stemming, to clean the review data. Several machine learning classifiers, including K-Nearest Neighbors (KNN), Random Forest, Naive Bayes, and Support Vector Machines (SVM), are used to train the model and classify the sentiment of the reviews.
 
-- Preprocessing data time series
-- Imputasi nilai hilang menggunakan `SimpleImputer` dan `KNNImputer`
-- One-Hot Encoding kolom kategorikal
-- Standarisasi data
-- Pelatihan model regresi (Linear Regression, Random Forest, dll.)
-- Evaluasi model dan visualisasi performa
-- Pembuatan file submission sesuai format
+## Features 🚀
 
-## Cara Menjalankan
+- **Text Preprocessing**: Tokenization, normalization, stopword removal, and stemming.
+- **Model Training**: Different classification models (KNN, Random Forest, Naive Bayes, SVM).
+- **Sentiment Labeling**: Reviews are categorized as **Positive**, **Neutral**, or **Negative** based on the score of the review.
+- **Evaluation Metrics**: Accuracy, Precision, Recall, F1 Score, and Confusion Matrix to evaluate model performance.
 
-1. **Clone repository ini**
+## Setup ⚙️
+
+To get started with this project, you can follow the steps below:
+
+### 1. Clone the Repository
 
 ```bash
-git clone <URL_REPO_KAMU>
-cd nama-folder-repo
+git clone https://github.com/your-username/sentiment-analysis-bank-reviews.git
+cd sentiment-analysis-bank-reviews
 ```
 
-2. **Install dependensi**
+### 2. Install Dependencies 🧰
+
+You can install the required libraries using the following command:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. **Jalankan script atau notebook**
+### 3. Run the Code 🚀
 
-Gunakan Jupyter Notebook atau jalankan script `main.py` jika disediakan.
+Once the dependencies are installed, you can run the analysis script to train the models and evaluate their performance.
 
-## Dependencies
+```bash
+python sentiment_analysis.py
+```
 
-Lihat `requirements.txt` untuk daftar lengkap pustaka yang digunakan.
+### 4. Visualize Results 📊
 
-## Catatan
+The project also provides visualizations for the sentiment distribution and confusion matrices for each classifier. These visualizations can be viewed after running the main script.
 
-- Pastikan semua kolom waktu telah dikonversi ke format datetime sebelum merge antar dataset.
-- Data memiliki format time series dari jam 6 pagi sampai 6 sore.
-- Model disusun untuk menyimpan hasil prediksi per model dalam format submission (berisi `Timestamp` dan `Baseline`).
+## Classifiers Used 🧑‍💻
 
-## Lisensi
+- **K-Nearest Neighbors (KNN)**
+- **Random Forest Classifier**
+- **Naive Bayes Classifier**
+- **Support Vector Machine (SVM)**
 
-Proyek ini bebas digunakan untuk keperluan edukasi dan non-komersial.
+## Evaluation Metrics 🏅
+
+- **Accuracy**: Measures the overall accuracy of the model.
+- **Precision**: Measures the percentage of true positive predictions.
+- **Recall**: Measures the percentage of actual positive instances correctly predicted.
+- **F1 Score**: The harmonic mean of precision and recall.
+- **Confusion Matrix**: A matrix used to visualize the classification results.
+
+## Visualizations 📈
+
+- Sentiment distribution for different Indonesian banks over the years.
+- Top 10 most frequent words in positive, neutral, and negative reviews for each bank.
+
+## Project Structure 🗂️
+
+```
+.
+├── data
+│   └── dataPerbankan.csv       # The dataset used for sentiment analysis
+├── scripts
+│   └── sentiment_analysis.py   # Main script for analysis and model training
+│   └── preprocessing.py        # Preprocessing steps (normalization, tokenization, etc.)
+├── requirements.txt            # List of dependencies
+└── README.md                   # Project documentation
+```
+
